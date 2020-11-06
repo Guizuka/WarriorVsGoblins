@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public Transform bow;
     public GameObject arrow;
 
-    
+
 
     private void Start()
     {
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
 
-        if (horiz > 0) 
+        if (horiz > 0)
         {
             GetComponent<SpriteRenderer>().flipX = false;
             bow.GetComponent<SpriteRenderer>().flipX = false;
@@ -51,21 +51,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Update() {
+    public void Update()
+    {
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-                     
+
             GameObject anArrow = Instantiate(arrow, bow.transform.position, bow.transform.rotation);
-              
+
 
         }
-        
+
     }
 
     private bool GroundCheck()
     {
         return Physics2D.OverlapCircle(groundCheckPos.position, groundCheckRadius, whatIsGround);
-        
+
     }
 }

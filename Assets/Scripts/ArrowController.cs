@@ -30,8 +30,7 @@ public class ArrowController : MonoBehaviour
         
     }
 
-    
 
-    
+
 }
 
