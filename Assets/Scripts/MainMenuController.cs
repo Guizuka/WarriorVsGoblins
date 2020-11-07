@@ -8,19 +8,19 @@ public class MainMenuController : MonoBehaviour
     public void StartGame()
     {
         //SceneManager.LoadScene("Level 1");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void TutorialGame()
     {
         //SceneManager.LoadScene("Tutorial");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     public void RestartGame()
     {
         //SceneManager.LoadScene("Level 1");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
     public void QuitGame()
