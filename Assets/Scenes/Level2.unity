@@ -720,9 +720,13 @@ PrefabInstance:
       propertyPath: speed
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 1597101658689227289, guid: 79a5b0d4fbcb3e54ca22cb47dba2e6d9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1597101658689227294, guid: 79a5b0d4fbcb3e54ca22cb47dba2e6d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 173
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 1597101658689227294, guid: 79a5b0d4fbcb3e54ca22cb47dba2e6d9, type: 3}
       propertyPath: m_LocalPosition.y
