@@ -54997,7 +54997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2004932605
 Transform:
   m_ObjectHideFlags: 0
@@ -55596,6 +55596,22 @@ PrefabInstance:
     - target: {fileID: 4423594892992284597, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594894184215309, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_GravityScale
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594894184215315, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: speed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594894184215315, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594894184215315, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: jumpForce
+      value: 2500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
