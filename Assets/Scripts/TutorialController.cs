@@ -9,7 +9,7 @@ public class TutorialController : MonoBehaviour
     public void Menu()
     {
         //SceneManager.LoadScene("Main Menu");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
 
