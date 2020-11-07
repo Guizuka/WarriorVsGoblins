@@ -20,7 +20,7 @@ public class MainMenuController : MonoBehaviour
     public void RestartGame()
     {
         //SceneManager.LoadScene("Level 1");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 
     public void QuitGame()
