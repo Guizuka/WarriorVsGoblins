@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
 
     //Private Variables
     private Rigidbody2D rBody;
+    private Animator anim;
+    //
+    private bool attack;
     [SerializeField] bool isGrounded = false;
 
     public Transform bow;
@@ -25,6 +28,26 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
+    //
+  
+    //
+    private void HandleAttacks()
+    {
+        if (attack && !this.anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            anim.SetTrigger("attack");
+            rBody.velocity = Vector2.zero;
+        }
+    }
+    //
+    private void HandleInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            attack = true;
+        }
     }
 
     private void FixedUpdate()
@@ -33,6 +56,10 @@ public class PlayerController : MonoBehaviour
         isGrounded = GroundCheck();
         Vector3 bowPos = bow.transform.localPosition;
         Vector3 playerPos = player.transform.localPosition;
+        //
+        HandleAttacks();
+        //
+        ResetValues();
 
         //jump
         if (isGrounded && Input.GetAxis("Jump") > 0)
@@ -41,7 +68,18 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
-        rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
+        //rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
+
+        //Communicate with the animator
+        anim.SetFloat("xVelocity", Mathf.Abs(rBody.velocity.x));
+        anim.SetFloat("yVelocity", rBody.velocity.y);
+        anim.SetBool("isGrounded", isGrounded);
+
+        //
+        if (!this.anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
+        }
 
         if (horiz > 0)
         {
@@ -74,7 +112,13 @@ public class PlayerController : MonoBehaviour
             aScript.Shoot(facingRight);
 
         }
+        //
+        HandleInput();
+    }
 
+    private void ResetValues()
+    {
+        attack = false;
     }
 
     private bool GroundCheck()

@@ -153,6 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4423594894184215308}
   - component: {fileID: 4423594894184215311}
+  - component: {fileID: 1873789838354912949}
   - component: {fileID: 4423594894184215314}
   - component: {fileID: 4423594894184215309}
   - component: {fileID: 4423594894184215315}
@@ -230,6 +231,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1873789838354912949
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423594894184215310}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8704266fa5a5799468da4b320fd2ce8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!70 &4423594894184215314
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -289,3 +309,5 @@ MonoBehaviour:
   isGrounded: 0
   bow: {fileID: 4423594893584617186}
   arrow: {fileID: 5154050419236319905, guid: 28ae1e492c291e342a5e7b2d5b301e8f, type: 3}
+  facingRight: 1
+  player: {fileID: 0}
