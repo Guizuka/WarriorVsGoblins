@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour
 
     public Transform bow;
     public GameObject arrow;
-
+    public bool facingRight = true;
+    public Transform player;
+    
 
 
     private void Start()
@@ -29,6 +31,8 @@ public class PlayerController : MonoBehaviour
     {
         float horiz = Input.GetAxis("Horizontal");
         isGrounded = GroundCheck();
+        Vector3 bowPos = bow.transform.localPosition;
+        Vector3 playerPos = player.transform.localPosition;
 
         //jump
         if (isGrounded && Input.GetAxis("Jump") > 0)
@@ -43,22 +47,31 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = false;
             bow.GetComponent<SpriteRenderer>().flipX = false;
+            bowPos.x = playerPos.x + 498;
+            bowPos.y = playerPos.y + 200;
+            bow.transform.position = bowPos;
+            facingRight = true;
         }
         else if (horiz < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
             bow.GetComponent<SpriteRenderer>().flipX = true;
+            bowPos.x = playerPos.x + 455;
+            bowPos.y = playerPos.y + 200;
+            bow.transform.position = bowPos;
+            facingRight = false;
         }
     }
 
     public void Update()
     {
-
+        float horiz = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Q))
         {
 
             GameObject anArrow = Instantiate(arrow, bow.transform.position, bow.transform.rotation);
-
+            ArrowController aScript = anArrow.GetComponent<ArrowController>();
+            aScript.Shoot(facingRight);
 
         }
 

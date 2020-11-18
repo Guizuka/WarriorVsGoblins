@@ -54169,6 +54169,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617186, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617186, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617186, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Color.r
+      value: 0.16078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Color.g
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Color.b
+      value: 0.19215688
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4423594894184215308, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1385
@@ -54179,7 +54227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4423594894184215309, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
       propertyPath: m_GravityScale
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4423594894184215315, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
       propertyPath: speed
@@ -54191,7 +54239,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4423594894184215315, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
       propertyPath: jumpForce
-      value: 2500
+      value: 5000
       objectReference: {fileID: 0}
+    - target: {fileID: 4423594894184215315, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 259020750}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
