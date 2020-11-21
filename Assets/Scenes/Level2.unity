@@ -17428,6 +17428,30 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617186, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3532547729105675132, guid: c950d72541dce6848b7cc3cd382bf1e1, type: 3}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Size.x
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_Size.y
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423594893584617187, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4423594894184215309, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
       propertyPath: m_GravityScale
       value: 10
@@ -17444,6 +17468,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 2500
       objectReference: {fileID: 0}
+    - target: {fileID: 4423594894184215315, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 530909271}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 197c6e17bae93794fa8166837bc47f52, type: 3}
 --- !u!1 &1432902126
