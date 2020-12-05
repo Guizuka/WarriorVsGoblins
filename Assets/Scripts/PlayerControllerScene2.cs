@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerScene2 : MonoBehaviour
 {
     //"Public" variables
     [SerializeField] private float speed = 100.0f;
@@ -82,32 +82,26 @@ public class PlayerController : MonoBehaviour
             rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
         }
 
-        
-    }
-
-    public void Update()
-    {
-        float horiz = Input.GetAxis("Horizontal");
-        Vector3 bowPos = bow.transform.localPosition;
+Vector3 bowPos = bow.transform.localPosition;
         Vector3 playerPos = player.transform.localPosition;
         
         if (horiz > 0)
         {
             GetComponent<SpriteRenderer>().flipX = false;
             bow.GetComponent<SpriteRenderer>().flipX = false;
-            bowPos.x = playerPos.x + 498;
-            bowPos.y = playerPos.y + 200;
+            bowPos.x = playerPos.x - 1400;
+            bowPos.y = playerPos.y - 400;
             bow.transform.position = bowPos;
-            facingRight = true;
+            facingRight = false;
         }
         else if (horiz < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true;
             bow.GetComponent<SpriteRenderer>().flipX = true;
-            bowPos.x = playerPos.x + 455;
-            bowPos.y = playerPos.y + 200;
+            bowPos.x = playerPos.x - 1300;
+            bowPos.y = playerPos.y - 400;
             bow.transform.position = bowPos;
-            facingRight = false;
+            facingRight = true;
         }
         
         if (Input.GetKeyDown(KeyCode.Q))
@@ -118,6 +112,13 @@ public class PlayerController : MonoBehaviour
             aScript.Shoot(facingRight);
 
         }
+        
+    }
+
+    public void Update()
+    {
+        float horiz = Input.GetAxis("Horizontal");
+        
         //
         HandleInput();
 
